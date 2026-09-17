@@ -1,5 +1,5 @@
-// ==UserScript==
-// @name         Dungeon runner
+﻿// ==UserScript==
+// @name         Dungeon runner v1
 // @namespace    http://tampermonkey.net/
 // @version      2026-08-31_09:49
 // @description  try to take over the world!
@@ -83,9 +83,9 @@
 
     const DEFAULT_ORDER = [
         //{ id: 'mixed', label: '⚡', background: 'linear-gradient(to bottom, #806104, #FFC107)', bColor: '#806104' },
-        { id: 'mixed', label: '⚡', background: 'radial-gradient(circle,#806104,#ffffff)', bColor: '#806104' },
         { id: 'water', label: '💧', background: 'linear-gradient(to bottom, #104B7A, #2196F3)', bColor: '#104B7A' },
         { id: 'earth', label: '🍀', background: 'linear-gradient(to bottom, #265828, #4CAF50)', bColor: '#265828' },
+        { id: 'mixed', label: '⚡', background: 'radial-gradient(circle,#806104,#ffffff)', bColor: '#806104' },
         { id: 'fire', label: '🔥', background: 'linear-gradient(to bottom, #7A211B, #F44336)', bColor: '#7A211B' },
     ]
 

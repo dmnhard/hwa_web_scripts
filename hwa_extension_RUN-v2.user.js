@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Dungeon runner + Quick RUN
+// @name         Dungeon runner + Quick RUN v2
 // @namespace    http://tampermonkey.net/
 // @version      2026-09-18_01:00
 // @description  Adds a quick RUN button next to Run Macro and reuses the existing Run Dungeon action.

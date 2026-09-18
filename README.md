@@ -25,10 +25,13 @@
 - Для Chrome: Кнопка "..." - Расширения - Управление расширениями - Tampermonkey Сведения - включить "Разрешить пользовательские скрипты"
 
 Версии скрипта:
-- Исходная версия: 
+- Исходная версия `hwa_extension.js`: \
 https://raw.githubusercontent.com/dmnhard/hwa_web_scripts/refs/heads/develop/hwa_extension.js
-- Версия с моими фиксами (сразу выставлен порядок комнат, доп кнопка RUN - сразу запускать подземелье, минус 1 клик мышью):
-https://raw.githubusercontent.com/dmnhard/hwa_web_scripts/refs/heads/develop/hwa_extension-v4.user.js
+- Версия с моими фиксами `hwa_extension-v4.user.js`: \
+  https://raw.githubusercontent.com/dmnhard/hwa_web_scripts/refs/heads/develop/hwa_extension-v4.user.js
+  - сразу выставлен порядок комнат
+  - доп кнопка RUN - сразу запускать подземелье, минус 1 клик мышью
+
 
 Установить скрипт в Tampermonkey:
 - Расширения - Tampermonkey - Параметры

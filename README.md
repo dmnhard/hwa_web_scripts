@@ -1,30 +1,67 @@
-# hwa_web_scripts
-Send your ideas for improvements to Deidara at "Phoenix Rebirth" or Discord: @int021h
+﻿# СКРИПТ ДЛЯ ПОДЗЕМЕЛЬЯ
 
-The latest script can be found here: 
-https://raw.githubusercontent.com/int021h/hwa_web_scripts/refs/heads/main/hwa_extension.js
+Если надоело копать подземелье вручную, добро пожаловать)
 
-To run dungeon script: 
-Install Tampermonkey chrome extension  (https://www.tampermonkey.net/)
-(https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=uk)
-It allows to run user scripts on a specific sites when they are loaded. It's necessary because game crashes sometimes and script reloads the page. 
-In Tampermonkey create new User Script and copy-paste script contents "hwa_extension.js", attach the script to the website (https://www.hero-wars-alliance.com/).
-open https://www.hero-wars-alliance.com/?beta-test, wait for 20 seconds
-toolbar will appear with dungeon settings
-tap "Run dungeon" while you're on any dungeon level
+Скрипт работает как умный автокликер:
+- выбирает комнаты по приоритетам
+- останавливается, если титан умер или мало хп
+- продолжает работу после рестарта игры (если игра падает)
 
-For infinite dungeon you need:
-- strong Moloch and Araji for Fire rooms
-- strong Angus for Earth rooms
-- middle Sigurd for Water rooms
+Скрипт не обращается к API игры.
 
-For mixed rooms use any healers you have with Moloch: 
-- Sigurd Mairi Tydus Hyperion + Moloch
-- Brustar Tenebris Mort Umbra +  Moloch
-- Rigel Lumira Aiyari Solaris +  Moloch
+Скрипт не мой, раньше был в открытом доступе, потом автор доступ закрыл.
 
-Script above:
-- uses only auto-battle
-- choses correct room in priority: Mixed, Water, Earth, Fire (can be changed)
-- waits for confirmation after each click or game lag
-- can collect 150k titanite (up to 2.2M titan potions) per day
+Проверялась работа:
+- в Chrome, Firefox, Edge на Windows ПК
+- в Firefox на планшете Android
+- в Firefox в BlueStacks (эмулятор Android для ПК)
+
+## Установка
+- Установить расширение Tampermonkey https://www.tampermonkey.net
+- Для Firefox доп. настройки не нужны
+- Для Chrome / Edge / Opera:
+  - Перейти по адресу chrome://extensions или edge://extensions или opera://extensions
+  - Переключить тумблер "Режим разработчика" в правом верхнем углу
+- Для Chrome: Кнопка "..." - Расширения - Управление расширениями - Tampermonkey Сведения - включить "Разрешить пользовательские скрипты"
+
+Версии скрипта:
+- Исходная версия: 
+https://raw.githubusercontent.com/dmnhard/hwa_web_scripts/refs/heads/develop/hwa_extension.js
+- Версия с моими фиксами (сразу выставлен порядок комнат, доп кнопка RUN - сразу запускать подземелье, минус 1 клик мышью):
+https://raw.githubusercontent.com/dmnhard/hwa_web_scripts/refs/heads/develop/hwa_extension-v4.user.js
+
+Установить скрипт в Tampermonkey:
+- Расширения - Tampermonkey - Параметры
+Далее несколько вариантов:
+- установить из URL: Утилиты - Импорт из URL
+- установить из файла: скачать скрипт на диск, Утилиты - Импорт из файла
+- Нажать + (Создать новый скрипт), скопировать, вставить содержимое скрипта, меню Файл - Сохранить
+
+Одновременно должна быть включена только одна версия!
+(переключатель на вкладке "Установленные скрипты")
+
+## Использование скрипта
+- Окрыть https://www.hero-wars-alliance.com/?beta-test
+- Вверху должна появиться кнопка "Run Macro" (и "RUN" в версии с фиксами)
+- Настроить параметры (разово):
+  - Вкладка Dungeon: Порядок комнат (перетаскивать мышью), Stop macro if (у меня Titan dies)
+  - Вкладка Delays: Delays multiplier (у меня работает на 1.5), Save
+- Каждый день разово: пройти все типы комнат, правильно выставить паки (см. отдельный гайд), поймать дзен Ангусу
+- Запустить скрипт: Run Macro - Run dungeon или просто RUN
+
+## Проблемы
+
+### Игра падает (надпись "Что-то пошло не так")
+Проблема игры, а не скрипта. Причина вероятно из-за утечки памяти. Разрабы жопоруки. Игра потребляет до 8 гб памяти, потом перезапускается.
+Решения пока нет.
+Но скрипт после перезапуска корректно продолжает работу.
+
+### Автоклики пропускаются
+Увеличить множитель Delays
+
+### Автоклики работают по неправильным координатам
+Возможные причины:
+- в комнате развернуто окно со списком титанов, закрыть
+- браузер открыли на полный экран (F11)
+- слишком маленькое окно браузера
+- необходимо проверить: слишком низкое разрешение экрана. На 1920х1080 работает нормально. Проверить ниже

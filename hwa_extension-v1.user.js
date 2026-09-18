@@ -2,7 +2,7 @@
 // @name         Dungeon runner v1
 // @namespace    http://tampermonkey.net/
 // @version      2026-08-31_09:49
-// @description  try to take over the world!
+// @description  Change dungeon rooms order
 // @author       You
 // @match        https://www.hero-wars-alliance.com/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=hero-wars-alliance.com
